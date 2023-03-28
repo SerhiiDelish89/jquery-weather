@@ -20,6 +20,17 @@ $.ajax({
     success: function (data) {
       console.log(data);
 
-      
+      $("#temp").empty().append(data.main.temp);
+      $("#feels").empty().append(data.main.feels_like);
+      $("#name").empty().append(data.name);
+      $("#description").empty().append(data.weather[0].description);
+      $("#humidity").empty().append(data.main.humidity);
+      $("#icon")
+        .empty()
+        .append(
+          "<img src='http://openweathermap.org/img/w/" +
+            data.weather[0].icon +
+            ".png' alt='Icon depicting current weather.' width='35' height='35'>"
+        );
     },
   });
