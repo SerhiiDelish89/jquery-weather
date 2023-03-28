@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-</head>
-<body>
-    <h1>hello</h1>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  </head>
+  <body>
+    <h1 class="title">Weather in Australia</h1>
+
+    <div class="weather-widget-container">
+      <div class="w-widget">
+
+
+        <div class="widget-head">
+          <div class="widget-head_icon"></div>
+          <div class="widget-head_name"></div>
+        </div>
+
+
+        <div class="w-widget_info">
+          <span id="temp"></span>
+          C&ordm / feels like:
+          <span id="feels"></span>
+          C&ordm
+        </div>
+        <div class="w-widget_info"><span id="description"></span></div>
+        <div class="w-widget_info">humidity: <span id="humidity"></span>%</div>
+
+
+        <form id="form" class="w-widget_form">
+            <label class="w-widget_form-label">
+              <select id="cities" class="w-widget_form-cities">
+                <option value="Sydney">Sydney</option>
+                <option value="Melbourne">Melbourne</option>
+                <option value="Brisbane">Brisbane</option>
+                <option value="Perth">Greater Perth</option>
+                <option value="Adelaide">Greater Adelaide</option>
+                <option value="Canberra">Canberra</option>
+                <option value="Hobart">Hobart</option>
+                <option value="Darwin">Darwin</option>
+              </select>
+            </label>
+            <label><button class="w-widget_form-btn" id="button">Reset</button></label>
+          </form>
+        
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
